@@ -1,0 +1,561 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font:'Gabriela', serif;
+    --color-dark: #212226;
+    --color-pink: #FCAEBB;
+    --color-violet: #F162DC;
+    --fontSize-h1: 2rem;
+    --fontSize-h2: 1.5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark);
+    font-family: var(--font);
+    width: 100vw;
+    padding: 35px 65px 0 65px;
+}
+
+/* home page */
+body.onePage {
+    height: 100vh;
+}
+
+/* header */
+header {
+    display: flex;
+    height: 100px;
+}
+
+header .logo {
+    width: 33%;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+header nav {
+    width: 67%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul li {
+    padding-left: 70px;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+    transition: 1s linear;
+}
+
+header nav ul a:hover {
+    color: var(--color-pink);
+}
+
+header nav ul li:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 1px;
+	width: 0px;
+	background: transparent;
+	-webkit-transition: width 1s ease, background-color 1s ease;
+	-o-transition: width 1s ease, background-color 1s ease;
+	transition: width 1s ease, background-color 1s ease;
+}
+
+header nav ul li:hover:after {
+	width: 100%;
+	background: var(--color-pink);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: var(--color-dark);
+    border-top: 1px solid var(--color-pink);
+    color: var(--color-pink);
+    line-height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+footer p {
+    margin: 0 65px;
+    width: 60%;
+    font-size: 0.8em;
+}
+
+footer .icons {
+    margin: 0 65px;
+    font-size: 1.2em;
+    width: 40%;
+    text-align: right;
+}
+
+footer .icons i {
+    margin-left: 80px;
+    cursor: pointer;
+    -webkit-transition: 2s linear;
+    -o-transition: 2s linear;
+    transition: 2s linear;
+}
+
+footer .icons i:hover {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-pink);
+}
+
+button {
+    background: transparent;
+    color: var(--color-violet);
+    font-family: var(--font);
+    border-radius: 15px;
+    border: 1px solid var(--color-violet);
+    cursor: pointer;
+    transition: 2s linear;
+    box-shadow: 1px 1px 10px #F162DC;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--color-pink);
+}
+
+button:hover,
+button:focus {
+    background-color: var(--color-violet);
+    border: 1px solid #fff;
+    color: #fff;;
+    -webkit-box-shadow: 2px 2px 6px #fff;;
+    box-shadow: 2px 2px 6px #fff;
+}
+
+
+#mobile-container {
+    display: none;
+}
+
+/* Booking page */
+.bookingPage {
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+}
+
+.bookingPage h1 {
+    color: var(--color-pink);
+    align-self: center;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.circle-bookingPage {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    z-index: -1;
+}
+
+.circle2-bookingPage {
+    position: absolute;
+    left: 65%;
+    top: 20%;
+}
+
+.circle3-bookingPage {
+    position: absolute;
+    right: 8%;
+    bottom: 10%;
+}
+
+
+/* ------------------------------------ */
+/* MEDIA QUERY - RESPONSIVE DESIGN */
+/* ------------------------------------ */
+
+/* BIG SCREEN */
+@media only screen and (min-width : 1524px) {
+    header nav ul a {
+        font-size: 2rem;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width : 1025px) {
+    header nav ul li {
+        padding-left: 40px;
+    }
+        
+    header nav ul a {
+        padding: 10px;
+        font-size: 1rem;
+        letter-spacing: .2rem;
+    }
+}
+
+
+/* TABLET - PORTRAIT */
+@media only screen and (min-width: 568px) and (max-width : 1023px) and (orientation:portrait) {
+    body {
+        padding: 20px 20px 0 20px;
+        }
+
+        header nav {
+            width: 80%;
+        }
+
+        header nav ul {
+            height: 70%;
+        }
+        
+        header nav ul li {
+            padding-left: 0px;
+        }
+        
+        header nav ul a {
+            padding: 15px;
+            font-size: 1rem;
+            letter-spacing: .2rem;
+        }
+        
+        footer {
+            height: 60px;
+            padding: 10px;
+        }
+        
+        footer p {
+            width: 60%;
+            font-size: 0.8rem;
+            line-height: 1.3rem;
+            margin-left: 20px;
+        }
+        
+        footer .icons {
+            margin-right: 20px;
+            font-size: 1.2rem;
+            width: 40%;
+            line-height: 2rem;
+        }
+        
+        footer .icons i {
+            margin-left: 30px;
+          
+        }
+}
+
+/* TABLET - LANDSCAPE */
+@media only screen and (min-width: 667px) and (max-width : 1023px) and (orientation : landscape) {
+    body {
+        /* background-color: orange; */
+        padding: 10px;
+    }
+
+    /* home page */
+    body.onePage {
+        height: 100vh;
+    }
+
+    /* header */
+    header {
+        display: flex;
+        height: 50px;
+    }
+
+    header nav ul li {
+        padding-left: 30px;
+    }
+
+    header nav ul a {
+        font-size: 1em;
+    }
+
+    footer {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    footer p {
+        margin: 0 30px;
+        font-size: 0.5em;
+      
+    }
+
+    footer .icons {
+        margin: 0 30px;
+        font-size: 0.8em;
+    }
+
+    footer .icons i {
+        margin-left: 50px;
+    }
+}
+
+/* mobile - portrait */
+@media only screen and (min-width: 320px) and (max-width : 567px) and (orientation:portrait) {
+        #desktop-container {
+            display: none;
+        }
+
+        body {
+            padding: 20px 20px 0 20px;
+            width: 100vw;
+            height: 100vh;
+        }
+    
+        #mobile-container {
+            display: inline-block;
+        }
+
+        #mobile-container header {
+            height: 12vh;
+        }
+
+        #mobile-container header .mobile-logo {
+           height: 75%;
+        }
+
+        #mobile-container header .mobile-logo img {
+            height: 100%;
+        }
+
+        /* menu hamburger */
+       .nav {
+            position: fixed;
+            background: var(--color-dark);
+            color: #fff;
+            top: 13%;
+            bottom: 10%;
+            /* left: 0; */
+            right: 10px;  
+            z-index: 100;
+            transform: translateX(100%);
+            transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+        }
+        
+       .nav-list {
+            list-style: none;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-link {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+       .nav-toggle {
+            padding: 15px;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            cursor: pointer;
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            z-index: 1000;
+            border-radius: 0;
+        }
+
+        .nav-toggle:hover,
+        .nav-toggle:focus {
+            background: transparent;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+        }
+        
+        .nav-open .nav {
+           transform: translateX(0);
+           width: 100vw;
+        }
+        
+        .nav-open .nav-toggle {
+            position: fixed;
+        }
+        
+        .nav-open .hamburger {
+            transform: rotate(.625turn);
+        }
+        
+        .nav-open .hamburger::before {
+           transform: rotate(90deg)
+           translateX(-6px);
+        }
+        
+       .nav-open .hamburger::after {
+            opacity: 0;
+        }
+        
+        /* hamburger menu */
+        .hamburger {
+            display: block;
+            position: relative;
+        }
+        
+        .hamburger,
+        .hamburger::before,
+        .hamburger::after {
+            background: var(--color-pink);
+            width: 2.2em;
+            height: 1px;
+            border-radius: 1em;
+            transition: transform 250ms ease-in-out;
+        }
+        
+        .hamburger::before,
+        .hamburger::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        
+        .hamburger::before{
+            top: 6px;
+        }
+        
+        .hamburger::after{
+            bottom: 6px;
+        }
+
+        #mobile-container main {
+            /* background-color: coral; */
+            height: 75vh;
+        }
+
+        #mobile-container footer {
+            height: 10vh;
+            padding: 9px 25px;
+        }
+
+        #mobile-container footer p {
+            font-size: 0.6em;
+            line-height: 15px;
+            margin: 0;
+        }
+
+        #mobile-container footer .icons {
+            padding: 0;
+            margin: 0;
+            font-size: 1em;  
+        }
+
+        #mobile-container footer .icons i {
+            padding-left: 15px;
+            margin: 0;
+        }
+
+        .circle-bookingPage {
+            position: absolute;
+            left: 5%;
+            top: 20%;
+            z-index: -1;
+        }
+        .circle-bookingPage img {
+             width: 80%;
+        }
+        
+        .circle2-bookingPage {
+            position: absolute;
+            left: 55%;
+            top: 30%;
+            z-index: -1;
+        }
+        
+        .circle3-bookingPage {
+            position: absolute;
+            right: 20%;
+            bottom: 15%;
+            z-index: -1;
+        }
+
+    
+}
+
+/* mobile -landscape */
+@media only screen and (min-width: 320px) and (max-width : 667px) and (orientation : landscape) {
+    body {
+        padding: 10px;
+    }
+
+    /* home page */
+    body.onePage {
+        height: 100vh;
+    }
+
+    /* header */
+    header {
+        display: flex;
+        height: 50px;
+    }
+
+    header nav ul li {
+        padding-left: 30px;
+    }
+
+    header nav ul a {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    footer p {
+        margin: 0 30px;
+        font-size: 0.5em;
+      
+    }
+
+    footer .icons {
+        margin: 0 30px;
+        font-size: 0.8em;
+    }
+
+    footer .icons i {
+        margin-left: 50px;
+    }
+}

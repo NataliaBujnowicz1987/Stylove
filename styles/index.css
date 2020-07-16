@@ -1,0 +1,371 @@
+/* HOME PAGE STYLES */
+main#homePage {
+    display: flex;
+    height: calc(100vh - 186px);
+}
+
+main#homePage div.left {
+    width: 40%;
+    text-align: right;
+}
+
+main#homePage div.left img {
+    height: 100%;
+}
+
+main#homePage div.right {
+    width: 60%;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 3.5em;
+    text-align: center;
+}
+
+main#homePage div.right h1 {
+    color: var(--color-pink);
+    font-weight: 100;
+    margin: 80px 30px 50px 30px;
+    text-shadow: 1px 1px 2px var(--color-violet);
+}
+
+main#homePage div.right h2 {
+    color: #fff;
+}
+
+main#homePage div.right button {
+    width: 30%;
+    height: 40px;
+    margin: 50px 20px;
+    font-size: 1em;
+}
+
+
+/* circle */
+#onePage .circle {
+    position: absolute;
+    top: 35%;
+    left: 7%;
+    z-index: -1;
+    animation: scissors 62s linear infinite alternate;
+}
+
+#onePage .circle2 {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    z-index: -1;
+    animation: circle 15s linear infinite alternate;
+}
+
+#onePage .circle3 {
+    position: absolute;
+    bottom: 10%;
+    left: 75%;
+    z-index: -1;
+}
+
+@keyframes circle {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes scissors {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------ */
+/* MEDIA QUERY - RESPONSIVE DESIGN */
+/* ------------------------------------ */
+
+/* BIG SCREEN */
+@media only screen and (min-width : 1524px) {
+    main#homePage div.right h1 {
+        font-size: 2.5rem;
+        letter-spacing: 5px;
+        line-height: 5rem;
+        margin: 120px 0 60px 0;
+    }
+
+    main#homePage div.right h2 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+
+    main#homePage div.right button {
+        margin: 100px 10px;
+        width: 40%;
+        height: 60px;
+        font-size: 1.5em;
+    }
+
+}
+
+/* Tablet - landscape */
+@media only screen and (min-width:  667px) and (max-width : 1023px) and (orientation : landscape) {
+        main#homePage {
+            display: flex;
+        }
+        
+        main#homePage div.left {
+            height: 72vh;
+            text-align: right;
+        }
+    
+        main#homePage div.left img {
+            height: 80%;
+            position: fixed;
+            top: 45px;
+            left: 70px;
+        }
+    
+        main#homePage div.right {
+        padding-top: 40px;
+        }
+    
+        main#homePage div.right h1 {
+            font-size: 1em;
+            line-height: 2em;
+            margin: 15px;
+        }
+    
+        main#homePage div.right h2 {
+            font-size: 0.9em;
+            margin: 0;
+            line-height: 2.5em;
+        }
+    
+        main#homePage div.right button {
+            width: 34%;
+            height: 30px;
+            margin: 40px 10px;
+            font-size: 0.8em;
+        }
+    
+        /* circle */
+        #onePage .circle {
+            top: 35%;
+            left: 7%;
+        }
+
+        #onePage .circle img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        #onePage .circle2 {
+            top: 25%;
+            left: 40%;
+        }
+    
+        #onePage .circle3 {
+            bottom: 10%;
+            left: 75%;
+        }
+
+        #onePage .circle3 img {
+            height: 50px;
+        }
+}
+
+/* Tablet - portrait */
+@media only screen and (min-width: 568px) and (max-width : 1023px) and (orientation:portrait) {
+
+    main#homePage div.left {
+        width: 30%;
+        /* text-align: left; */
+       
+    }
+    
+    main#homePage div.left img {
+        height: 70%;
+        position: fixed;
+        bottom: 60px;
+        left: -10px;
+    }
+    
+    main#homePage div.right {
+        width: 80%;
+        letter-spacing: 2px;
+        line-height: 3.5em;
+
+    }
+    
+    main#homePage div.right h1 {
+        color: var(--color-pink);
+        font-weight: 100;
+        position: fixed;
+        top: 23%;
+        left: 37%;
+        text-align: right;
+        width: 55%;
+    }
+    
+    main#homePage div.right h2 {
+        color: #fff;
+        position: fixed;
+        top: 18%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90%;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    main#homePage div.right button {
+        width: 35%;
+        height: 45px;
+        margin: 50px 20px;
+        position: fixed;
+        right: 5%;
+    }
+
+    main#homePage div.right button.btn-meetUs {
+        bottom: 13%;
+    }
+
+    main#homePage div.right button.btn-booking {
+        bottom: 25%;
+    }
+    
+    #onePage .circle2 {
+        top: 25%;
+        left: 45%;
+    }
+    
+    #onePage .circle3 {
+        bottom: 20%;
+        left: 65%;
+       
+    }
+}
+
+/* mobile - landscape */
+@media only screen and (min-width: 320px) and (max-width : 667px) and (orientation : landscape) {
+    main#homePage div.left img {
+        height: 72%;
+        top: 58px;
+        left: 75px;
+        background-color: lawngreen;
+    }
+
+    main#homePage div.right {
+        padding-top: 10px;
+    }
+
+    main#homePage div.right button {
+        margin: 5px 10px;
+    }
+  
+    /* circle */
+    #onePage .circle {
+        left: 5%;
+    }
+
+    #onePage .circle2 {
+        top: 18%;
+        left: 38%;
+    }
+
+    #onePage .circle2 img {
+        width: 100px;
+    }
+
+    #onePage .circle3 {
+        bottom: 10%;
+        left: 75%;
+    }
+
+    #onePage .circle3 img {
+        height: 150px;
+    }
+}
+
+/* mobile - portait */
+@media only screen and (min-width: 320px) and (max-width : 567px) and (orientation:portrait) {
+    #mobile-container .mobile-main {
+        text-align: center;
+    }
+
+    #mobile-container .mobile-main h1 {
+        padding: 10px 5px;
+        color: var(--color-pink);
+        letter-spacing: 0.1em;
+        text-shadow: 1px 1px 2px #F162DC;
+        font-size: 1.5em;
+        line-height: 1.5em;
+     }
+
+     #mobile-container .mobile-main .white-span {
+         color: #fff;
+     }
+
+     #mobile-container .mobile-main button {
+        width: 40%;
+        height: 30px;
+        margin: 10px;
+        font-size: 1em;
+    }
+
+     #mobile-container main .mobile-img {
+         width: 65%;
+         position: fixed;
+         bottom: 9vh;
+         left: 0;
+         z-index: -10;
+     }
+
+     #mobile-container main .mobile-img img {
+        width: 100%;
+     }
+
+     .mobile-circle {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        z-index: -2;
+        opacity: 0.5;
+        animation: scissors 115s linear infinite alternate;
+     }
+
+     .mobile-circle img,
+     .mobile-circle2 img {
+        width: 70%;
+     }
+
+     .mobile-circle2 {
+        position: fixed;
+        top: 70%;
+        right: -20px;
+        z-index: -2;
+        opacity: 0.5;
+        animation: circle 15s linear infinite alternate;
+     }
+
+    @keyframes circle {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.2);
+        }
+    }
+    
+    @keyframes scissors {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+}

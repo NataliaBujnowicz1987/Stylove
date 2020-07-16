@@ -1,0 +1,172 @@
+body#servicePage {
+    width: 96vw;
+    margin: 0 auto;
+
+  }
+  
+.service-boxes {
+    height: 55vh;
+    margin: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.service-boxes .service-box {
+    flex-basis: 30%;
+    background: rgba(252, 174, 187, 0.2);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #F162DC;
+}
+
+.service-box h1 {
+    height: 25%;
+    line-height: 2.7em;
+    letter-spacing: 0.1em;
+    color: #FCAEBB;
+    text-shadow: 1px 1px 2px #F162DC;
+    font-weight: 100;
+}
+
+.service-box div {
+    height: 75%;
+    overflow: hidden;
+}
+
+.service-box div img  {
+    width: 100%;
+    height: 100%;
+    transition: 
+    transform 1.5s cubic-bezier(.5, 0, .5, 1),
+    opacity 1s linear;
+}
+
+.service-box:hover img {
+    transform: scale(1.2);
+    opacity: .6;
+}
+
+.gallery-h1 {
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-weight: 100;
+    color: var(--color-pink);
+    border: 1px solid var(--color-violet);
+    box-shadow: 1px 1px 10px #F162DC;
+    padding: 10px;
+    width: 50%;
+    margin: 100px auto;
+    text-shadow: 1px 1px 2px #F162DC;
+    border-radius: 30px;
+}
+
+/* gellery section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 50px 0 130px 0;
+}
+
+.gallery__item {
+    background: var(--color-dark);
+    overflow: hidden;
+    border-radius: 30px;
+    height: 100%;
+}
+
+.gallery__img {
+    height: 100%;
+    width: 100%;
+    transition: 
+    transform 1.5s cubic-bezier(.5, 0, .5, 1),
+    opacity 1s linear;
+}
+
+.gallery__img:hover,
+.v__item:focus .gallery__img {
+    transform: scale(1.2);
+    opacity: .6;
+}
+
+
+
+
+ /* ------------------------------------ */
+/* MEDIA QUERY - RESPONSIVE DESIGN */
+/* ------------------------------------ */
+
+/* BIG SCREEN */
+@media only screen and (min-width : 1524px) {
+    .service-boxes  {
+        height: 45vh;
+        margin: 100px 0;
+    }
+
+    .gallery {
+        margin: 100px 0 100px 0;
+    }
+}
+
+@media only screen and (max-width : 1023px) {
+    .service-boxes {
+        height: 55vh;
+        margin: 40px 0;
+    }
+
+
+    .service-boxes .service-box {
+        flex-basis: 30%;
+        background: rgba(252, 174, 187, 0.2);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+  
+    }
+  
+    .service-box h1 {
+        height: auto;
+        line-height: 1.2em;
+        font-size: 1.2em;
+        font-weight: 100;
+        padding: 20px 0;
+    }
+
+    h1.gallery-h1 {
+        font-size: 1.5em;
+        font-weight: 100;
+        margin: 50px auto;
+    }
+    
+    /* gellery section */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: 50px 0 50px 0;
+    }
+}
+
+@media only screen and (min-width: 760px) and (max-width : 770px) {
+    .service-boxes {
+        height: 27vh;
+        margin: 70px 0;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width : 657px) {
+    .service-boxes {
+        height: 820px;
+        margin: 30px 0;
+        flex-direction: column;
+    }
+
+    .gallery-h1 {
+        width: 80%;
+    }
+
+}
